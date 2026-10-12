@@ -32,3 +32,7 @@ test("should throw on non-object options", () => {
 test("should keep characters outside the BMP intact", () => {
 	assert.equal(toBatCase("🦇 bat"), "ʇɐq 🦇");
 });
+
+test("should flip uppercase letters with their own glyph", () => {
+	assert.equal(toBatCase("DKQ"), "Όꓘᗡ");
+});
