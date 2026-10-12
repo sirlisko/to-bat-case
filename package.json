@@ -4,7 +4,7 @@
   "description": "Convert a string to bat case.",
   "main": "index.js",
   "scripts": {
-    "test": "eslint . && node test"
+    "test": "eslint . && node --test"
   },
   "repository": {
     "type": "git",
@@ -35,8 +35,7 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "tape": "^4.8.0"
+    "eslint-plugin-standard": "^3.0.1"
   },
   "engines": {
     "node": ">=4"
