@@ -1,52 +1,64 @@
-# to-bat-case [![Build Status][travis-image]][travis-url]
+# to-bat-case
+
+[![npm][npm-image]][npm-url] [![license][license-image]][license-url]
 
 > Convert a string to ǝsɐƆ ʇɐ𐐒. 🦇
 
-Example: `Bat_Case!` → `¡ǝsɐƆ‾ʇɐ𐐒`
+`Bat_Case!` → `¡ǝsɐƆ‾ʇɐ𐐒`
 
-## Installation
+- **Tiny.** One function, no dependencies.
+- **Typed.** TypeScript declarations included.
+
+## Install
 
 ```bash
-$ npm install to-bat-case
+npm install to-bat-case
 ```
 
-## Example
+## Usage
 
 ```js
-const toBatCase = require('to-bat-case')
+import toBatCase from "to-bat-case";
 
-toBatCase('NA NA NA NA NA NA NA NA NA NA NA NA NA NA')
+toBatCase("NA NA NA NA NA NA NA NA NA NA NA NA NA NA");
 //=> '∀N ∀N ∀N ∀N ∀N ∀N ∀N ∀N ∀N ∀N ∀N ∀N ∀N ∀N'
 
-toBatCase('Bat_Case!')
+toBatCase("Bat_Case!");
 //=> '¡ǝsɐƆ‾ʇɐ𐐒'
 
-toBatCase('NA NA NA NA NA NA NA NA NA NA NA NA NA NA', false)
-//=> 'N∀ N∀ N∀ N∀ N∀ N∀ N∀ N∀ N∀ N∀ N∀ N∀ N∀ N∀'
-
-toBatCase('Bat_Case!', false)
+toBatCase("Bat_Case!", { reverse: false });
 //=> '𐐒ɐʇ‾Ɔɐsǝ¡'
 ```
 
+The package is ESM-only. From CommonJS on Node 22+, use `require("to-bat-case").default`.
+
 ## API
 
-### toBatCase(input, [noRevert])
+```ts
+toBatCase(input: string, options?: { reverse?: boolean }): string
+```
 
-Returns the `input` converted to bat case.
+| Parameter         | Default  | Description                                                |
+| ----------------- | -------- | ---------------------------------------------------------- |
+| `input`           | required | The string to convert; anything else throws a `TypeError`  |
+| `options.reverse` | `true`   | Reverse the character order, as if the text were rotated   |
 
-#### input
+Characters with no upside-down counterpart are kept as they are.
 
-Type: `string`
+### Upgrading from 1.x
 
-#### noRevert
-
-Type: `bool`
-
-Default: `false`
+- The package is ESM-only and needs Node 22+.
+- `toBatCase(input, true)` is now `toBatCase(input, { reverse: false })`. Passing a boolean throws a `TypeError`.
 
 ## Inspired by
 
 The series of [case helpers](https://github.com/ianstormtaylor/to-case) and [this tweet](https://twitter.com/lyzidiamond/status/874423709867491328).
 
-[travis-image]: https://travis-ci.org/sirLisko/to-bat-case.svg?branch=master
-[travis-url]: https://travis-ci.org/sirLisko/to-bat-case
+## License
+
+[MIT][license-url] © Luca Lischetti
+
+[npm-image]: https://img.shields.io/npm/v/to-bat-case.svg
+[npm-url]: https://npmjs.com/package/to-bat-case
+[license-image]: https://img.shields.io/npm/l/to-bat-case.svg
+[license-url]: https://github.com/sirlisko/to-bat-case/blob/main/LICENSE
