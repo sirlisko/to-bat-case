@@ -10,16 +10,23 @@ test("should bat case the text", () => {
 	assert.equal(toBatCase("Bat_Case!"), "¡ǝsɐƆ‾ʇɐ𐐒");
 });
 
-test("should bat case the text - no reverse", () => {
+test("should keep the order with reverse: false", () => {
 	assert.equal(
-		toBatCase("NA NA NA NA NA NA NA NA NA NA NA NA NA NA", true),
+		toBatCase("NA NA NA NA NA NA NA NA NA NA NA NA NA NA", {
+			reverse: false,
+		}),
 		"N∀ N∀ N∀ N∀ N∀ N∀ N∀ N∀ N∀ N∀ N∀ N∀ N∀ N∀",
 	);
-	assert.equal(toBatCase("Bat_Case!", true), "𐐒ɐʇ‾Ɔɐsǝ¡");
+	assert.equal(toBatCase("Bat_Case!", { reverse: false }), "𐐒ɐʇ‾Ɔɐsǝ¡");
 });
 
 test("should throw on non-string input", () => {
 	assert.throws(() => toBatCase(42), TypeError);
+});
+
+test("should throw on non-object options", () => {
+	assert.throws(() => toBatCase("bat", true), TypeError);
+	assert.throws(() => toBatCase("bat", null), TypeError);
 });
 
 test("should keep characters outside the BMP intact", () => {
