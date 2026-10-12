@@ -2,7 +2,17 @@
 	"name": "to-bat-case",
 	"version": "1.1.0",
 	"description": "Convert a string to bat case.",
+	"type": "module",
+	"sideEffects": false,
 	"main": "index.js",
+	"exports": {
+		".": "./index.js",
+		"./package.json": "./package.json"
+	},
+	"files": [
+		"index.js",
+		"dictionary.js"
+	],
 	"scripts": {
 		"check": "biome check --write .",
 		"test": "node --test"
@@ -20,21 +30,17 @@
 		"text",
 		"convert"
 	],
-	"author": {
-		"name": "Luca Lischetti",
-		"email": "luca@sirlisko.com",
-		"url": "https://sirlisko.com"
-	},
+	"author": "Luca Lischetti <luca@sirlisko.com> (https://sirlisko.com)",
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/sirLisko/to-bat-case/issues"
 	},
 	"homepage": "https://github.com/sirLisko/to-bat-case#readme",
-	"engines": {
-		"node": ">=4"
-	},
-	"packageManager": "pnpm@10.7.0",
 	"devDependencies": {
 		"@biomejs/biome": "2.5.15"
-	}
+	},
+	"engines": {
+		"node": ">=22"
+	},
+	"packageManager": "pnpm@10.7.0"
 }

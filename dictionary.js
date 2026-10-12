@@ -1,4 +1,4 @@
-module.exports = {
+export default {
 	0: "0",
 	1: "Ɩ",
 	2: "ᄅ",

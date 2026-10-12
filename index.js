@@ -1,6 +1,6 @@
-const dictionary = require("./dictionary");
+import dictionary from "./dictionary.js";
 
-module.exports = (str, options = {}) => {
+export default function toBatCase(str, options = {}) {
 	if (typeof str !== "string") {
 		throw new TypeError("Expected a string");
 	}
@@ -16,4 +16,4 @@ module.exports = (str, options = {}) => {
 	);
 
 	return (reverse ? upSideDown.reverse() : upSideDown).join("");
-};
+}

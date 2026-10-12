@@ -1,6 +1,6 @@
-const { test } = require("node:test");
-const assert = require("node:assert/strict");
-const toBatCase = require(".");
+import assert from "node:assert/strict";
+import { test } from "node:test";
+import toBatCase from "./index.js";
 
 test("should bat case the text", () => {
 	assert.equal(
