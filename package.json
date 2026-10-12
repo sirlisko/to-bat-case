@@ -1,44 +1,40 @@
 {
-  "name": "to-bat-case",
-  "version": "1.1.0",
-  "description": "Convert a string to bat case.",
-  "main": "index.js",
-  "scripts": {
-    "test": "eslint . && node --test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sirLisko/to-bat-case.git"
-  },
-  "keywords": [
-    "bat-case",
-    "bat",
-    "case",
-    "string",
-    "str",
-    "text",
-    "convert"
-  ],
-  "author": {
-    "name": "Luca Lischetti",
-    "email": "luca@sirlisko.com",
-    "url": "https://sirlisko.com"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sirLisko/to-bat-case/issues"
-  },
-  "homepage": "https://github.com/sirLisko/to-bat-case#readme",
-  "devDependencies": {
-    "eslint": "^4.7.2",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-node": "^5.1.1",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1"
-  },
-  "engines": {
-    "node": ">=4"
-  },
-  "packageManager": "pnpm@10.7.0"
+	"name": "to-bat-case",
+	"version": "1.1.0",
+	"description": "Convert a string to bat case.",
+	"main": "index.js",
+	"scripts": {
+		"check": "biome check --write .",
+		"test": "node --test"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sirLisko/to-bat-case.git"
+	},
+	"keywords": [
+		"bat-case",
+		"bat",
+		"case",
+		"string",
+		"str",
+		"text",
+		"convert"
+	],
+	"author": {
+		"name": "Luca Lischetti",
+		"email": "luca@sirlisko.com",
+		"url": "https://sirlisko.com"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/sirLisko/to-bat-case/issues"
+	},
+	"homepage": "https://github.com/sirLisko/to-bat-case#readme",
+	"engines": {
+		"node": ">=4"
+	},
+	"packageManager": "pnpm@10.7.0",
+	"devDependencies": {
+		"@biomejs/biome": "2.5.15"
+	}
 }
