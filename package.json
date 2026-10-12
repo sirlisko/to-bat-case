@@ -1,6 +1,6 @@
 {
 	"name": "to-bat-case",
-	"version": "1.1.0",
+	"version": "2.0.0",
 	"description": "Convert a string to bat case.",
 	"type": "module",
 	"sideEffects": false,
@@ -24,7 +24,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/sirLisko/to-bat-case.git"
+		"url": "git+https://github.com/sirlisko/to-bat-case.git"
 	},
 	"keywords": [
 		"bat-case",
@@ -38,9 +38,9 @@
 	"author": "Luca Lischetti <luca@sirlisko.com> (https://sirlisko.com)",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/sirLisko/to-bat-case/issues"
+		"url": "https://github.com/sirlisko/to-bat-case/issues"
 	},
-	"homepage": "https://github.com/sirLisko/to-bat-case#readme",
+	"homepage": "https://github.com/sirlisko/to-bat-case#readme",
 	"devDependencies": {
 		"@biomejs/biome": "2.5.15"
 	},
