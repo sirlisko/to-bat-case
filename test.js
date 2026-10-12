@@ -21,3 +21,7 @@ test("should bat case the text - no reverse", () => {
 test("should throw on non-string input", () => {
 	assert.throws(() => toBatCase(42), TypeError);
 });
+
+test("should keep characters outside the BMP intact", () => {
+	assert.equal(toBatCase("🦇 bat"), "ʇɐq 🦇");
+});

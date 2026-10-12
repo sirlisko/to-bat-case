@@ -5,9 +5,10 @@ module.exports = (str, noRevert) => {
 		throw new TypeError("Expected a string");
 	}
 
-	const upSideDown = str
-		.split("")
-		.map((ch) => dictionary[ch] || dictionary[ch.toLowerCase()] || ch);
+	const upSideDown = Array.from(
+		str,
+		(ch) => dictionary[ch] || dictionary[ch.toLowerCase()] || ch,
+	);
 
 	return (noRevert ? upSideDown : upSideDown.reverse()).join("");
 };
