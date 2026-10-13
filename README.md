@@ -2,7 +2,7 @@
 
 [![npm][npm-image]][npm-url] [![license][license-image]][license-url]
 
-> Convert a string to ǝsɐƆ ʇɐ𐐒. 🦇
+Convert a string to ǝsɐƆ ʇɐ𐐒. 🦇
 
 `Bat_Case!` → `¡ǝsɐƆ‾ʇɐ𐐒`
 
