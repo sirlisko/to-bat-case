@@ -1,44 +1,51 @@
 {
-  "name": "to-bat-case",
-  "version": "1.1.0",
-  "description": "Convert a string to bat case.",
-  "main": "index.js",
-  "scripts": {
-    "test": "eslint . && node test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sirLisko/to-bat-case.git"
-  },
-  "keywords": [
-    "bat-case",
-    "bat",
-    "case",
-    "string",
-    "str",
-    "text",
-    "convert"
-  ],
-  "author": {
-    "name": "Luca Lischetti",
-    "email": "luca@sirlisko.com",
-    "url": "https://sirlisko.com"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sirLisko/to-bat-case/issues"
-  },
-  "homepage": "https://github.com/sirLisko/to-bat-case#readme",
-  "devDependencies": {
-    "eslint": "^4.7.2",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-node": "^5.1.1",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "tape": "^4.8.0"
-  },
-  "engines": {
-    "node": ">=4"
-  }
+	"name": "to-bat-case",
+	"version": "2.0.0",
+	"description": "Convert a string to bat case.",
+	"type": "module",
+	"sideEffects": false,
+	"main": "index.js",
+	"types": "index.d.ts",
+	"exports": {
+		".": {
+			"types": "./index.d.ts",
+			"default": "./index.js"
+		},
+		"./package.json": "./package.json"
+	},
+	"files": [
+		"index.js",
+		"index.d.ts",
+		"dictionary.js"
+	],
+	"scripts": {
+		"check": "biome check --write .",
+		"test": "node --test"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sirlisko/to-bat-case.git"
+	},
+	"keywords": [
+		"bat-case",
+		"bat",
+		"case",
+		"string",
+		"str",
+		"text",
+		"convert"
+	],
+	"author": "Luca Lischetti <luca@sirlisko.com> (https://sirlisko.com)",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/sirlisko/to-bat-case/issues"
+	},
+	"homepage": "https://github.com/sirlisko/to-bat-case#readme",
+	"devDependencies": {
+		"@biomejs/biome": "2.5.15"
+	},
+	"engines": {
+		"node": ">=22"
+	},
+	"packageManager": "pnpm@12.11.2"
 }

@@ -1,16 +1,19 @@
-const dictionary = require('./dictionary')
+import dictionary from "./dictionary.js";
 
-module.exports = (str, noRevert) => {
-  if (typeof str !== 'string') {
-    throw new TypeError('Expected a string')
-  }
+export default function toBatCase(str, options = {}) {
+	if (typeof str !== "string") {
+		throw new TypeError("Expected a string");
+	}
+	// Fail loudly for 1.x callers passing a boolean, which would otherwise be ignored
+	if (typeof options !== "object" || options === null) {
+		throw new TypeError("Expected options to be an object");
+	}
 
-  const upSideDown = str
-    .split('')
-    .map(ch => dictionary[ch] || dictionary[ch.toLowerCase()] || ch)
+	const { reverse = true } = options;
+	const upSideDown = Array.from(
+		str,
+		(ch) => dictionary[ch] || dictionary[ch.toLowerCase()] || ch,
+	);
 
-  return (noRevert
-    ? upSideDown
-    : upSideDown.reverse()
-  ).join('')
+	return (reverse ? upSideDown.reverse() : upSideDown).join("");
 }
